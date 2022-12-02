@@ -8,13 +8,19 @@ namespace Advant_Of_Code_2022
             new()
             {
                 { "Day1", new Delegate[]
-                {
-                    CalorieCounting.Part1,
-                    CalorieCounting.Part2
+                    {
+                        CalorieCounting.Part1,
+                        CalorieCounting.Part2
+                    }
+                },
+                { "Day2", new Delegate[]
+                    {
+                        RockPaperScissors.Part1
+                    }
                 }
-            }
-        };
-        static void WaitForKey() {
+            };
+        static void WaitForKey()
+        {
             Console.Write("\nPlease enter a key...");
             Console.ReadKey();
         }
@@ -38,7 +44,7 @@ namespace Advant_Of_Code_2022
                     {
                         Console.WriteLine("=====================================\nYou are selecting " + result.Key + ".");
                         Console.WriteLine("There are " + result.Value.Length + " parts for this day.");
-                        Console.Write("Select between the days >");
+                        Console.Write("Select between the parts >");
                         string? partString = Console.ReadLine();
                         try
                         {
