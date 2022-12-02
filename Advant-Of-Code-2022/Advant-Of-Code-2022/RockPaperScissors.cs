@@ -29,18 +29,7 @@ namespace Advant_Of_Code_2022
             {
                 string[] choices = line.Split(' ');
                 int opponentChoice = choices[0].ToCharArray()[0] - 'A', playerChoice = choices[1].ToCharArray()[0] - 'X';
-                switch (playerChoice)
-                {
-                    case 0:
-                        score += 1;
-                        break;
-                    case 1:
-                        score += 2;
-                        break;
-                    case 2:
-                        score += 3;
-                        break;
-                }
+                score += playerChoice + 1;
                 if (mod(playerChoice + 1, 3) == opponentChoice)
                 {
                     score += 0;
