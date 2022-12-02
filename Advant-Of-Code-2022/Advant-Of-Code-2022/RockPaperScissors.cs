@@ -56,5 +56,37 @@ namespace Advant_Of_Code_2022
             }
             Console.WriteLine(score);
         }
+        public static void Part2()
+        {
+            StreamReader reader = File.OpenText("Inputs/Day2.txt");
+            string line;
+            int score = 0;
+            /*
+             * R = A = X = 1
+             * P = B = Y = 2
+             * S = C = Z = 3
+             * Win = 6
+             * Draw = 3
+             * Lose = 0
+             */
+            while ((line = reader.ReadLine()) != null)
+            {
+                string[] choices = line.Split(' ');
+                int opponentChoice = choices[0].ToCharArray()[0] - 'A', playerOutcome = choices[1].ToCharArray()[0] - 'X';
+                switch (playerOutcome)
+                {
+                    case 0:
+                        score += 0 + mod(opponentChoice - 1, 3) + 1;
+                        break;
+                    case 1:
+                        score += 3 + opponentChoice + 1;
+                        break;
+                    case 2:
+                        score += 6 + mod(opponentChoice + 1, 3) + 1;
+                        break;
+                }
+            }
+            Console.WriteLine(score);
+        }
     }
 }
