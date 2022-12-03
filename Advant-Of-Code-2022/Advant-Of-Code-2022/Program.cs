@@ -21,8 +21,8 @@ namespace Advant_Of_Code_2022
                 },
                 { "Day3", new Delegate[]
                     {
-                        //RucksackReorganization.Part1,
-                        //RockPaperScissors.Part2
+                        RucksackReorganization.Part1,
+                        RucksackReorganization.Part2
                     }
                 }
             };
@@ -31,7 +31,7 @@ namespace Advant_Of_Code_2022
             Console.Write("\nPlease enter a key...");
             Console.ReadKey();
         }
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             while (true)
             {
@@ -66,7 +66,7 @@ namespace Advant_Of_Code_2022
                             Console.Clear();
                             break;
                         }
-                        catch (Exception ex)
+                        catch (Exception _)
                         {
                             Console.WriteLine("Unable to get the part " + partString);
                             WaitForKey();
@@ -74,7 +74,7 @@ namespace Advant_Of_Code_2022
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception _)
                 {
                     Console.WriteLine("Unable to get the day " + dayString);
                     WaitForKey();
