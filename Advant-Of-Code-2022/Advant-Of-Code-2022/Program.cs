@@ -18,6 +18,12 @@ namespace Advant_Of_Code_2022
                         RockPaperScissors.Part1,
                         RockPaperScissors.Part2
                     }
+                },
+                { "Day3", new Delegate[]
+                    {
+                        //RucksackReorganization.Part1,
+                        //RockPaperScissors.Part2
+                    }
                 }
             };
         static void WaitForKey()
@@ -25,7 +31,7 @@ namespace Advant_Of_Code_2022
             Console.Write("\nPlease enter a key...");
             Console.ReadKey();
         }
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             while (true)
             {
