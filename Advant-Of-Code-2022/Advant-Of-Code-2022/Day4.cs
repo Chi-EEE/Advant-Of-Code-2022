@@ -33,10 +33,21 @@ namespace Advant_Of_Code_2022
         {
             StreamReader reader = File.OpenText("Inputs/Day4.txt");
             string line;
+            int score = 0;
             while ((line = reader.ReadLine()) != null)
             {
-
+                string[] elves = line.Split(',');
+                string e1 = elves[0], e2 = elves[1];
+                string[] ns1 = e1.Split('-');
+                string[] ns2 = e2.Split('-');
+                int re11 = int.Parse(ns1[0]), re12 = int.Parse(ns1[1]);
+                int re21 = int.Parse(ns2[0]), re22 = int.Parse(ns2[1]);
+                if (re21 >= re11 && re22 <= re12 || re11 >= re21 && re12 <= re22 || re21 == re11 || re22 == re12 || re22 == re11 || re21 == re12 || re12 >= re21 && re12 <= re22 || re11 >= re21 && re11 <= re22 || re21 >= re11 && re21 <= re12 || re22 >= re11 && re22 <= re12)
+                {
+                    score++;
+                }
             }
+            Console.WriteLine(score);
         }
     }
 }
