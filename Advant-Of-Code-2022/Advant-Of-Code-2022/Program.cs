@@ -24,6 +24,12 @@ namespace Advant_Of_Code_2022
                         RucksackReorganization.Part1,
                         RucksackReorganization.Part2
                     }
+                },
+                { "Day4", new Delegate[]
+                    {
+                        Day4.Part1,
+                        Day4.Part2
+                    }
                 }
             };
         static void WaitForKey()

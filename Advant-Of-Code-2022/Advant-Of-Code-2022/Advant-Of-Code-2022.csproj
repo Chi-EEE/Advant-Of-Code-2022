@@ -9,6 +9,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Inputs\TextFile1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Inputs\TextFile1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
   </ItemGroup>
   
