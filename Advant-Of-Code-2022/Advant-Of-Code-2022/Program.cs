@@ -36,6 +36,12 @@ namespace Advant_Of_Code_2022
                         Day5.Part1,
                         Day5.Part2
                     }
+                },
+                { "Day6", new Delegate[]
+                    {
+                        Day6.Part1,
+                        Day6.Part2
+                    }
                 }
             };
         static void WaitForKey()
